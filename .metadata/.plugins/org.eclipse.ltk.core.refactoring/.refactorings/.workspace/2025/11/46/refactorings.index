@@ -1,2 +1,3 @@
 1762684968248	Rename resource 'FreeRTOS_Projects'
 1762911086862	Delete resource '002_LEDTasks/common/ThirdParty/FreeRTOS/FreeRTOSConfig.h'
+1762918997715	Delete resource '003_LEDBlockedTasks/Core/FreeRTOSConfig.h'
