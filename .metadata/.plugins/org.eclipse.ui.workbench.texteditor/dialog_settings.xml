@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="false"/>
+	<list key="searchhistory">
+		<item value="xPortStartScheduler"/>
+		<item value="struct"/>
+		<item value="struct TCB"/>
+		<item value="TCB"/>
+		<item value="TCB_t"/>
+		<item value="TaskFunction_t"/>
+		<item value="depth_type"/>
+		<item value="depth_tpe"/>
+		<item value="systick"/>
+	</list>
+</section>
