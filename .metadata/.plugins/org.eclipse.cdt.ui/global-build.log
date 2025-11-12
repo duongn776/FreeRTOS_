@@ -1,4 +1,4 @@
-10:46:33 **** Build of configuration Debug for project 003_LEDBlockedTasks ****
+11:20:52 **** Build of configuration Debug for project 004_LEDPeriodicTasks ****
 make -j8 all 
 arm-none-eabi-gcc "D:/RTOS/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER/Syscalls/SEGGER_RTT_Syscalls_GCC.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/RTOS/RTOS_workspace/common/ThirdParty/FreeRTOS/include" -I"D:/RTOS/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F" -I"D:/RTOS/RTOS_workspace/common/ThirdParty/SEGGER/Config" -I"D:/RTOS/RTOS_workspace/common/ThirdParty/SEGGER/OS" -I"D:/RTOS/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"common/ThirdParty/SEGGER/SEGGER/Syscalls/SEGGER_RTT_Syscalls_GCC.d" -MT"common/ThirdParty/SEGGER/SEGGER/Syscalls/SEGGER_RTT_Syscalls_GCC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "common/ThirdParty/SEGGER/SEGGER/Syscalls/SEGGER_RTT_Syscalls_GCC.o"
 arm-none-eabi-gcc "D:/RTOS/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER/SEGGER_RTT.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/RTOS/RTOS_workspace/common/ThirdParty/FreeRTOS/include" -I"D:/RTOS/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F" -I"D:/RTOS/RTOS_workspace/common/ThirdParty/SEGGER/Config" -I"D:/RTOS/RTOS_workspace/common/ThirdParty/SEGGER/OS" -I"D:/RTOS/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"common/ThirdParty/SEGGER/SEGGER/SEGGER_RTT.d" -MT"common/ThirdParty/SEGGER/SEGGER/SEGGER_RTT.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "common/ThirdParty/SEGGER/SEGGER/SEGGER_RTT.o"
@@ -39,28 +39,21 @@ arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_timebase_tim.c" -mcpu=cortex-m4 -st
 arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/RTOS/RTOS_workspace/common/ThirdParty/FreeRTOS/include" -I"D:/RTOS/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F" -I"D:/RTOS/RTOS_workspace/common/ThirdParty/SEGGER/Config" -I"D:/RTOS/RTOS_workspace/common/ThirdParty/SEGGER/OS" -I"D:/RTOS/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
 arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/RTOS/RTOS_workspace/common/ThirdParty/FreeRTOS/include" -I"D:/RTOS/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F" -I"D:/RTOS/RTOS_workspace/common/ThirdParty/SEGGER/Config" -I"D:/RTOS/RTOS_workspace/common/ThirdParty/SEGGER/OS" -I"D:/RTOS/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
 arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/RTOS/RTOS_workspace/common/ThirdParty/FreeRTOS/include" -I"D:/RTOS/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F" -I"D:/RTOS/RTOS_workspace/common/ThirdParty/SEGGER/Config" -I"D:/RTOS/RTOS_workspace/common/ThirdParty/SEGGER/OS" -I"D:/RTOS/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
-arm-none-eabi-gcc -o "003_LEDBlockedTasks.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\RTOS\RTOS_workspace\003_LEDBlockedTasks\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="003_LEDBlockedTasks.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 003_LEDBlockedTasks.elf
+arm-none-eabi-gcc -o "004_LEDPeriodicTasks.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\RTOS\RTOS_workspace\004_LEDPeriodicTasks\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="004_LEDPeriodicTasks.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 004_LEDPeriodicTasks.elf
  
-arm-none-eabi-size  003_LEDBlockedTasks.elf 
-arm-none-eabi-objdump -h -S 003_LEDBlockedTasks.elf  > "003_LEDBlockedTasks.list"
+arm-none-eabi-size  004_LEDPeriodicTasks.elf 
+arm-none-eabi-objdump -h -S 004_LEDPeriodicTasks.elf  > "004_LEDPeriodicTasks.list"
    text	   data	    bss	    dec	    hex	filename
-  24380	     24	  84504	 108908	  1a96c	003_LEDBlockedTasks.elf
+  24604	     24	  84504	 109132	  1aa4c	004_LEDPeriodicTasks.elf
 Finished building: default.size.stdout
  
-Finished building: 003_LEDBlockedTasks.list
+Finished building: 004_LEDPeriodicTasks.list
  
-10:46:55 **** Incremental Build of configuration Debug for project 003_LEDBlockedTasks ****
+11:21:05 **** Incremental Build of configuration Debug for project 004_LEDPeriodicTasks ****
 make -j8 all 
-arm-none-eabi-size  003_LEDBlockedTasks.elf 
+arm-none-eabi-size  004_LEDPeriodicTasks.elf 
    text	   data	    bss	    dec	    hex	filename
-  24380	     24	  84504	 108908	  1a96c	003_LEDBlockedTasks.elf
-Finished building: default.size.stdout
- 
-10:47:14 **** Incremental Build of configuration Debug for project 003_LEDBlockedTasks ****
-make -j8 all 
-arm-none-eabi-size  003_LEDBlockedTasks.elf 
-   text	   data	    bss	    dec	    hex	filename
-  24380	     24	  84504	 108908	  1a96c	003_LEDBlockedTasks.elf
+  24604	     24	  84504	 109132	  1aa4c	004_LEDPeriodicTasks.elf
 Finished building: default.size.stdout
  
