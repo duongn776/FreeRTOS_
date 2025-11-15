@@ -3,6 +3,8 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
+		<item value="configUSE_"/>
+		<item value="configUSE_TASK_GET_HANDLE"/>
 		<item value="tskTaskControlBlock"/>
 		<item value="xPortStartScheduler"/>
 		<item value="struct"/>
