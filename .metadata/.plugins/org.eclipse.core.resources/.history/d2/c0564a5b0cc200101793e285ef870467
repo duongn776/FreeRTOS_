@@ -1,0 +1,11 @@
+/*
+ * task_handler.c
+ *
+ *  Created on: Nov 15, 2025
+ *      Author: nhduong
+ */
+
+
+#include "main.h"
+
+void menu_task(void *param)

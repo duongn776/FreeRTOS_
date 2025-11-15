@@ -1,4 +1,4 @@
-11:51:12 **** Incremental Build of configuration Debug for project 007_ExchangedTaskPriority ****
+16:46:13 **** Build of configuration Debug for project 007_ExchangedTaskPriority ****
 make -j8 all 
 arm-none-eabi-size  007_ExchangedTaskPriority.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  007_ExchangedTaskPriority.elf
 Finished building: default.size.stdout
  
 
-11:51:13 Build Finished. 0 errors, 0 warnings. (took 1s.110ms)
+16:46:17 Build Finished. 0 errors, 0 warnings. (took 3s.106ms)
 
