@@ -3,6 +3,9 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
+		<item value="xQueueGenericCreate"/>
+		<item value="QueueHandle_t"/>
+		<item value="SemaphoreHandle_t"/>
 		<item value="configUSE_"/>
 		<item value="configUSE_TASK_GET_HANDLE"/>
 		<item value="tskTaskControlBlock"/>
