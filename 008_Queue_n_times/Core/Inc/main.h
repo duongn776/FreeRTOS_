@@ -42,6 +42,48 @@ extern "C" {
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
 
+typedef struct
+{
+	uint8_t payload[10];
+	uint32_t len;
+}command_t;
+
+/* Application states */
+typedef enum
+{
+	sMainMenu = 0,
+	sLedEffect,
+	sRtcMenu,
+	sRtcTimeConfig,
+	sRtcDateConfig,
+	sRtcReport,
+}state_t;
+
+extern xTaskHandle handle_cmd_task;
+extern xTaskHandle handle_menu_task;
+extern xTaskHandle handle_print_task;
+extern xTaskHandle handle_led_task;
+extern xTaskHandle handle_rtc_task;
+
+
+extern QueueHandle_t q_data;
+extern QueueHandle_t q_print;
+
+
+extern state_t curr_state;
+
+extern TimerHandle_t handle_led_timer[4];
+
+//extern TimerHandle_t rtc_timer;
+
+
+extern UART_HandleTypeDef huart2;
+extern RTC_HandleTypeDef hrtc;
+
+
+
+
+
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
@@ -63,6 +105,15 @@ void led_task(void *param);
 void rtc_task(void *param);
 void print_task(void *param);
 void cmd_handler_task(void *param);
+
+void led_effect_stop(void);
+void led_effect(int n);
+
+void LED_effect1(void);
+void LED_effect2(void);
+void LED_effect3(void);
+void LED_effect4(void);
+
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
@@ -134,7 +185,10 @@ void cmd_handler_task(void *param);
 #define MEMS_INT2_GPIO_Port GPIOE
 
 /* USER CODE BEGIN Private defines */
-
+#define LED1  LD4_Pin
+#define LED2  LD3_Pin
+#define LED3  LD5_Pin
+#define LED4  LD6_Pin
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

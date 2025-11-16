@@ -1,0 +1,69 @@
+/*
+ * task_handler.c
+ *
+ *  Created on: Nov 15, 2025
+ *      Author: nhduong
+ */
+
+
+#include "main.h"
+
+int extract_command(command_t *cmd);
+void process_command(command_t *cmd);
+
+void menu_task(void *param)
+{
+	while(1);
+}
+
+
+
+void print_task(void *param)
+{
+	while(1);
+}
+
+void led_task(void *param)
+{
+	while(1);
+}
+
+void rtc_task(void *param)
+{
+	while(1);
+}
+
+void cmd_handler_task(void *param)
+{
+	BaseType_t retVal;
+	command_t cmd;
+	while (1)
+	{
+		/* implement notify wait */
+		retVal  = xTaskNotifyWait(0, 0, NULL, portMAX_DELAY);
+
+		if (retVal == pdTRUE)
+		{
+			/* process the user data(command) stored in input data queue */
+			process_command(&cmd);
+		}
+	}
+}
+
+void process_command(command_t *cmd)
+{
+	extract_command(cmd);
+
+	switch(curr_state)
+	{
+		case sMainMenu:
+			xTaskNotify(handle_menu_task, (uint32_t)cmd, eSetValueWithOverwrite);
+			break;
+	}
+}
+int extract_command(command_t *cmd)
+{
+
+
+}
+

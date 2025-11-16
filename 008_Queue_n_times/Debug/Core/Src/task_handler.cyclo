@@ -1,5 +1,7 @@
-../Core/Src/task_handler.c:11:6:menu_task	1
-../Core/Src/task_handler.c:16:6:cmd_handler_task	1
-../Core/Src/task_handler.c:21:6:print_task	1
-../Core/Src/task_handler.c:26:6:led_task	1
-../Core/Src/task_handler.c:31:6:rtc_task	1
+../Core/Src/task_handler.c:17:6:menu_task	6
+../Core/Src/task_handler.c:71:6:led_task	7
+../Core/Src/task_handler.c:118:6:rtc_task	1
+../Core/Src/task_handler.c:123:6:print_task	1
+../Core/Src/task_handler.c:132:6:cmd_handler_task	2
+../Core/Src/task_handler.c:149:6:process_command	5
+../Core/Src/task_handler.c:175:5:extract_command	4
