@@ -399,40 +399,35 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
-/* This function called from UART interrupt handler , hence executes in interrupt context */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
 
 	uint8_t dummy;
 
 	/* Check queue is full or not */
-	/*Queue is not full */
-	if(!xQueueIsQueueFullFromISR(xQueue))
+	if(xQueueIsQueueFullFromISR(xQueue))
 	{
-		/* Enqueue data byte */
-		xQueueSendFromISR(q_data, (void*)user_data, NULL);
+		/*Queue is not full */
 
-	}else
-	{
+		/*TODO: Enqueue data byte */
+
+	}else{
 		/*Queue is full */
-		if(user_data == '\n')
+
+		if(/*TODO: check, is user_data '\n'? */)
 		{
-			/* make sure that last data byte of the queue is '\n' */
-			xQueueReceiveFromISR(q_data, (void*)dummy, NULL);
-			xQueueSendFromISR(q_data, (void*)user_data, NULL);
+			/*user_data = '\n' */
+
+			/*TODO: make sure that last data byte of the queue is '\n' */
 		}
 	}
 
-	/* send notification to command handling task if user_data = '\n' */
-	if(user_data == '\n')
-	{
-		/*send notification to command handling task */
-		xTaskNotifyFromISR(handle_cmd_task, 0, eNoAction, NULL);
-	}
 
-	/* Enable UART data byte reception again in IT mode */
-	 HAL_UART_Receive_IT(&huart2, (uint8_t*)&user_data, 1);
+	/*TODO: send notification to command handling task if user_data = '\n' */
+
+
+	/* TODO: Enable UART data byte reception again in IT mode */
+
 
 }
 /* USER CODE END 4 */
